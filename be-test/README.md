@@ -8,7 +8,7 @@
  1. Clone the repository.
  2. Cd to the be-test folder.
  3. Run npm i
- 4. Create and fill in a .env file inside te be-test folder with the .env.example as the base.
+ 4. Create and fill in a .env file inside te be-test folder with the .env.example as the base. NOTE: for BASE_URL=${URI}/${PORT}
  5. Run `npm run migration:generate -- db/migrations/NewMigration`, then `npm run migration:run` to migrate the database.
  6. Run npm run start to start the server.
  7. Use the provided Postman collection to see the route documentation and test the routes.
