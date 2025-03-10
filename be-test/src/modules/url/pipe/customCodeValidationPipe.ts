@@ -16,7 +16,7 @@ export class CustomCodeValidationPipe implements PipeTransform {
         throw new BadRequestException();
       }
 
-      return dto;
+      return value;
     } else {
       throw new BadRequestException('Invalid argument');
     }

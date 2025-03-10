@@ -54,12 +54,12 @@ export class URLController {
   async getLongUrl(
     @Res() res: Response,
     @Param('code', CustomCodeValidationPipe)
-    dto: GetLongURLDTO
+    dto: string
   ) {
     let link = '';
     try {
-      if (dto.code.length > 16) throw new BadRequestException();
-      link = await this.urlService.redirect(dto.code);
+      if (dto.length > 16) throw new BadRequestException();
+      link = await this.urlService.redirect(dto);
     } catch (error) {
       this.logger.log('Invalid Request', this.getLongUrl.name);
       if (error instanceof NotFoundException) {
